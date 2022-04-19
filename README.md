@@ -5,7 +5,7 @@ A small web app that tries to imitate the desktop web version of amazon site, yo
 ## Amazon Clone Demo Link
 
 You can watch the site here 
-[Click Me](https://amaznclone-v1.web.app/)
+[Click Me](https://clone-f512b.firebaseapp.com/)
 (with typing credit card number as: 4242 4242 4242 4242 cvv:42424 valid date:0424)
 
 ## Topics 
@@ -20,6 +20,3 @@ You can watch the site here
 - Responsive Design
 - Deploy the app live on Firebase
 
-## Author
-
-Özge Coşkun Gürsucu (codermother)

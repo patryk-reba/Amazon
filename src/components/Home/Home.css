@@ -25,7 +25,15 @@
 }
 
 
-@media only screen and (max-width: 500px) {
+@media(max-width: 1367px) {
+
+    .home-image {
+
+        margin-bottom: -200px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     .home-row {
         display: grid;
     }
@@ -34,13 +42,5 @@
         margin-bottom: -100px;
         width: 100%;
 
-    }
-}
-
-@media(max-width: 1367px) {
-
-    .home-image {
-
-        margin-bottom: -200px;
     }
 }

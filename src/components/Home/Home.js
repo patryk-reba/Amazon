@@ -35,10 +35,10 @@ function Home() {
           <Product
             key="3"
             id="4903850"
-            title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
+            title="Rudy: My Story, CD-Audio – CD"
             price={199.99}
             rating={3}
-            image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+            image="https://images-na.ssl-images-amazon.com/images/I/51AR5KrB+YL._SX301_BO1,204,203,200_.jpg"
           />
           <Product
             key="4"
@@ -62,7 +62,7 @@ function Home() {
           <Product
             key="6"
             id="90829332"
-            title="HP 24mh FHD Monitor - Computer Monitor with 23.8-Inch IPS Display (1080p) - Built-In Speakers and VESA Mounting - Height/Tilt Adjustment for Ergonomic Viewing - HDMI and DisplayPort - (1D0J9AA#ABA)"
+            title="HP 24mh FHD Monitor - Computer Monitor with 23.8-Inch IPS Display (1080p)"
             price={190.00}
             rating={4}
             image="https://m.media-amazon.com/images/I/91fAU6mxFsL._AC_SX679_.jpg"

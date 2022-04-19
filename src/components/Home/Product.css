@@ -9,6 +9,7 @@
     min-width: 100px;
     width: 100%;
     z-index: 1;
+    transition-duration: 300ms;
 }
 
 
@@ -43,6 +44,7 @@
 .product>button:hover {
     transition-duration: 300ms;
     transform: scale(1.02);
+    background-color: #f59d2a;
 }
 
 .product-price {

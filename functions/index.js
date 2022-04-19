@@ -2,7 +2,7 @@ const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
-  "sk_test_51IdVudBDYzH08iN6Eay86bOJHF3Rcnk3Op924xYPxQCaCDWJR5JHRhtUYvSSC9v76vK5Cozy97kO9GPge4HKJJO9003LEFLBdA"
+  "sk_test_51KppbwGPYshWl3yxEFukFay7gSg5IhcscESzqDrlR7CRaOAwIYYh5BWqYwzecMuSHKclqZZhtphsOt22DzYu6Lfk003MaXYEsU"
 );
 
 // API
@@ -16,6 +16,7 @@ app.use(express.json());
 
 // - API routes
 app.get("/", (request, response) => response.status(200).send("hello world"));
+
 
 app.post("/payments/create", async (request, response) => {
   const total = request.query.total;
@@ -37,4 +38,4 @@ app.post("/payments/create", async (request, response) => {
 exports.api = functions.https.onRequest(app);
 
 // Example endpoint
-// http://localhost:5001/amaznclone-v1/us-central1/api.
+// http://localhost:5001/clone-f512b/us-central1/api

@@ -1,6 +1,8 @@
 {
   "functions": {
-    "predeploy": [],
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ],
     "source": "functions"
   },
   "hosting": {
@@ -9,12 +11,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
