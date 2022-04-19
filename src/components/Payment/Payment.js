@@ -128,6 +128,8 @@ function Payment() {
             {/* Stripe magic will go */}
 
             <form onSubmit={handleSubmit}>
+
+              <p style={{ fontSize: '10px', opacity: '.5' }}>Use this card: 4242 4242 4242 4242  MM / RR: 04/24 CVC: 4242</p>
               <CardElement onChange={handleChange} />
 
               <div className="payment-priceContainer">
