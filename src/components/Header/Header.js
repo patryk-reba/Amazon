@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 // import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
@@ -8,10 +8,24 @@ import { auth } from "../../firebase";
 // import FmdGoodOutlinedIcon from '@material-ui/icons/FmdGoodOutlined';
 import { FiShoppingCart } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
+import useGeolocation from "react-hook-geolocation";
 
 function Header({ setQuery }) {
   const [{ basket, user }, dispatch] = useStateValue();
   const searchRef = useRef(null);
+  const [locationCountry, setLocationCountry] = useState("");
+  const [locationCity, setLocationCity] = useState("");
+
+  const geolocation = useGeolocation();
+  const geoloc = async () => {
+    const res = await fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${geolocation.latitude}&longitude=${geolocation.longitude}&localityLanguage=eng`
+    );
+    const data = await res.json();
+    console.log(data);
+    return setLocationCountry(data.countryName), setLocationCity(data.locality);
+  };
+  geoloc();
 
   useEffect(() => {
     searchRef.current.focus();
@@ -38,7 +52,8 @@ function Header({ setQuery }) {
           />
           <div className="header-option-location">
             <span className="header-optionLineOne">Deliver to</span>
-            <span className="header-optionLineTwo">Poland</span>
+            {/* <span className="header-optionLineTwo">{locationCountry}</span> */}
+            <span className="header-optionLineTwo">{locationCity}</span>
           </div>
         </div>
 

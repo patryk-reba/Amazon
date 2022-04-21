@@ -20,14 +20,22 @@ function Home({ query }) {
     "https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg",
     "https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg",
     "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61N83xtyr6L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61N83xtyr6L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61N83xtyr6L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
   ]);
-
-  // const breakPoints = [
-  //   { width: 1, itemsToShow: 1 },
-  //   { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-  //   { width: 768, itemsToShow: 3 },
-  //   { width: 1200, itemsToShow: 4 },
-  // ];
 
   return (
     <div className="home">
@@ -41,19 +49,9 @@ function Home({ query }) {
           autoPlaySpeed={5000}
         >
           {carousel.map((item) => (
-            <img
-              className="home-image"
-              src={item}
-              alt=""
-              // style={{ width: "120%", height: "100%", margin: "0" }}
-            />
+            <img className="home-image" src={item} alt="" />
           ))}
         </Carousel>
-        {/* <img
-          className="home-image"
-          src="https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg"
-          alt=""
-        /> */}
         <div className="home-row">
           {(query.toLowerCase().includes("c") || query == "") && (
             <Product
