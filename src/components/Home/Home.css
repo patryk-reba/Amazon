@@ -5,14 +5,14 @@
     margin-right: auto;
     width: 100%;
     max-width: 1500px;
-
+    overflow: hidden;
 }
 
 .home-image {
-    width: 100%;
+    width: 120%;
     object-fit: contain;
-    z-index: -1;
-    margin-bottom: -350px;
+        z-index: -1;
+    /* margin-bottom: -350px; */
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0));
 
 }
@@ -24,23 +24,64 @@
     margin-right: 5px;
 }
 
-
+.rec.rec-carousel {
+    width:110%;
+    margin-bottom: -400px;
+}
 @media(max-width: 1367px) {
 
     .home-image {
-
-        margin-bottom: -200px;
+height: 100%;
+        
     }
+    .rec.rec-carousel {
+        width:110%;
+        margin-bottom: -250px;
+    }
+    
 }
 
 @media only screen and (max-width: 767px) {
     .home-row {
         display: grid;
     }
-
-    .home-image {
-        margin-bottom: -100px;
-        width: 100%;
-
+    .rec.rec-carousel {
+        width:150%;
+        margin-bottom: -150px;
+        overflow: hidden;
     }
+    /* .home-image {
+     
+        width: 100%;
+height:"100%"
+    } */
 }
+
+/* Carousel */
+
+
+/* square buttons */
+.rec.rec-arrow {
+    /* border-radius: 0; */
+    /* position: absolute; */
+   position: absolute;
+   margin-bottom: 300px;
+    background-color: none;
+    opacity: .5;
+    z-index: 99
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+    
+}
+/* hide disabled buttons
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+} */
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+.rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px lightgrey;
+}
+

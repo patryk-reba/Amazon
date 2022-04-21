@@ -1,19 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Product from "./Product";
+import Carousel from "react-elastic-carousel";
 
 function Home({ query }) {
+  const [carousel, setCarousel] = useState([
+    "https://m.media-amazon.com/images/I/61N83xtyr6L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61N83xtyr6L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61N83xtyr6L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/711Y9Al9RNL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
+  ]);
 
-
+  // const breakPoints = [
+  //   { width: 1, itemsToShow: 1 },
+  //   { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+  //   { width: 768, itemsToShow: 3 },
+  //   { width: 1200, itemsToShow: 4 },
+  // ];
 
   return (
     <div className="home">
       <div className="home-container">
-        <img
+        <Carousel
+          pagination={false}
+          disableArrowsOnEnd={false}
+          transitionMs={600}
+          showArrows={false}
+          enableAutoPlay={true}
+          autoPlaySpeed={5000}
+        >
+          {carousel.map((item) => (
+            <img
+              className="home-image"
+              src={item}
+              alt=""
+              // style={{ width: "120%", height: "100%", margin: "0" }}
+            />
+          ))}
+        </Carousel>
+        {/* <img
           className="home-image"
           src="https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg"
           alt=""
-        />
+        /> */}
         <div className="home-row">
           {(query.toLowerCase().includes("c") || query == "") && (
             <Product
