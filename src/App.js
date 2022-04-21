@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -24,6 +24,8 @@ const promise = loadStripe(
 
 function App() {
   const [{}, dispatch] = useStateValue();
+  const [query, setQuery] = useState("");
+
   let location = useLocation();
 
   useEffect(() => {
@@ -77,8 +79,8 @@ function App() {
             </Elements>
           </Route>
           <Route path="/">
-            <Header />
-            <Home />
+            <Header setQuery={setQuery} />
+            <Home query={query} />
           </Route>
         </Switch>
         {/* </CSSTransition>
