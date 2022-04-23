@@ -8,6 +8,10 @@
     overflow: hidden;
 }
 
+.home-container {
+    width: 1000px
+}
+
 .home-image {
     width: 120%;
     object-fit: contain;
@@ -26,7 +30,8 @@
 
 .rec.rec-carousel {
     width: 110%;
-    margin-bottom: -400px;
+    margin-bottom: -300px;
+
 }
 
 @media(max-width: 1367px) {
@@ -36,21 +41,55 @@
 
     }
 
+
     .rec.rec-carousel {
         width: 105%;
-        margin-bottom: -250px;
+        margin-bottom: -280px;
     }
 
 }
 
-@media only screen and (max-width: 767px) {
+@media(max-width: 900px) {
+
+    .home-image {
+        height: 100%;
+
+    }
+
+
+    .rec.rec-carousel {
+        width: 105%;
+        margin-bottom: -230px;
+    }
+
+}
+
+@media  (max-width: 767px) {
     .home-row {
         display: grid;
     }
 
     .rec.rec-carousel {
         width: 150%;
-        margin-bottom: -150px;
+        margin-bottom: -180px;
+        overflow: hidden;
+    }
+
+    /* .home-image {
+     
+        width: 100%;
+height:"100%"
+    } */
+}
+
+@media  (max-width: 500px) {
+    .home-row {
+        display: grid;
+    }
+
+    .rec.rec-carousel {
+        width: 150%;
+        margin-bottom: -180px;
         overflow: hidden;
     }
 
@@ -76,7 +115,7 @@ height:"100%"
 }
 
 /* round buttons on hover */
-.rec.rec-arrow:hover {}
+/* .rec.rec-arrow:hover {} */
 
 /* hide disabled buttons
 .rec.rec-arrow:disabled {
@@ -88,3 +127,27 @@ height:"100%"
     outline: none;
     box-shadow: inset 0 0 1px 1px lightgrey;
 }
+
+/* transitions */
+
+.dialog-enter {
+    opacity: 0.01;
+    transform: scale(1.1);
+  }
+  
+  .dialog-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+  }
+  
+  .dialog-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .dialog-exit-active {
+    opacity: 0.01;
+    transform: scale(1.1);
+    transition: all 300ms;
+  }

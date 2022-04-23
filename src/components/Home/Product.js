@@ -41,8 +41,11 @@ function Product({ id, title, image, price, rating }) {
       </div>
 
       <img src={image} alt="" />
-      {user ? <button onClick={addToBasket}> Add to basket</button> : <button onClick={() => history.replace('/login')}>Log in to buy</button>}
-
+      {user ? (
+        <button onClick={addToBasket}> Add to basket</button>
+      ) : (
+        <button onClick={() => history.replace("/login")}>Log in to buy</button>
+      )}
     </div>
   );
 }

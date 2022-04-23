@@ -24,7 +24,7 @@ const promise = loadStripe(
 
 function App() {
   const [{}, dispatch] = useStateValue();
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(" ");
 
   let location = useLocation();
 
