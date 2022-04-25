@@ -29,6 +29,7 @@
   z-index: 1;
   margin-left: 5px;
   margin-right: 5px;
+  max-width: 100%;
 }
 
 .rec.rec-carousel {
@@ -138,4 +139,51 @@ height:"100%"
   opacity: 0.01;
   transform: scale(1.1);
   transition: all 300ms;
+}
+
+.amazon-pics {
+  width: 340px;
+  block-size: fit-content;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.amazon-pics:hover {
+  cursor: pointer;
+}
+
+.sign-in-btn {
+  background: #ffde39;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+  transition-duration: 300ms;
+  margin-left: 50px;
+  width: 270px;
+  height: 30px;
+  margin-top: 30px;
+}
+
+.sign-in-btn:hover {
+  transition-duration: 300ms;
+  transform: scale(1.02);
+  background-color: #f59d2a;
+  cursor: pointer;
+}
+
+.signin-container {
+  background: white;
+  height: 130px;
+  margin-bottom: 20px;
+  width: 350px;
+  padding: 10px 0px;
+}
+
+.sign-in {
+  margin-left: 30px;
+  text-decoration: none !important;
+  color: black;
 }

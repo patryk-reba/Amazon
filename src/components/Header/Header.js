@@ -9,6 +9,7 @@ import { auth } from "../../firebase";
 import { FiShoppingCart } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
 import useGeolocation from "react-hook-geolocation";
+import { Navbar } from "react-bootstrap";
 
 function Header({ setQuery }) {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -48,12 +49,12 @@ function Header({ setQuery }) {
         </Link>
         <div className="location-container">
           <GoLocation
-            style={{ color: "white", marginRight: "-10px", marginTop: "10px" }}
+            style={{ color: "white", marginRight: "-12px", marginTop: "20px" }}
           />
           <div className="header-option-location">
             <span className="header-optionLineOne">Deliver to</span>
-            {/* <span className="header-optionLineTwo">{locationCountry}</span> */}
-            <span className="header-optionLineTwo">{locationCity}</span>
+            <span className="header-optionLineTwo">{locationCountry}</span>
+            {/* <span className="header-optionLineTwo">{locationCity}</span> */}
           </div>
         </div>
 

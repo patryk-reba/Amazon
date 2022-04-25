@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import Home2 from "./components/Home/Home2";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +19,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./components/Orders/Orders";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-
+import Navbar from "./components/Header/Navbar";
 const promise = loadStripe(
   "pk_test_51KppbwGPYshWl3yxKSg606rlNECfSoT3s4tFk7PZu3IRE3dIYO10yBKkj2hHXrDSAOHjRQ3zvGLBbc7ladZBwDab003oTPQjo9"
 );
@@ -63,6 +65,7 @@ function App() {
         <Switch location={location}>
           <Route path="/orders">
             <Header />
+
             <Orders />
           </Route>
           <Route path="/login">
@@ -72,6 +75,10 @@ function App() {
             <Header />
             <Checkout />
           </Route>
+          <Route path="/shop">
+            <Header setQuery={setQuery} />
+            <Home query={query} />
+          </Route>
           <Route path="/payment">
             <Header />
             <Elements stripe={promise}>
@@ -80,7 +87,8 @@ function App() {
           </Route>
           <Route path="/">
             <Header setQuery={setQuery} />
-            <Home query={query} />
+            <Navbar />
+            <Home2 query={query} />
           </Route>
         </Switch>
         {/* </CSSTransition>
