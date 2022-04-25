@@ -71,8 +71,8 @@ function Home({ query }) {
             <img className="home-image" src={item} alt="" />
           ))}
         </Carousel>
-        <Link to="/shop">
-          <div className="home-row">
+        <div className="home-row">
+          <Link to="/shop">
             <TransitionGroup component={null}>
               {title1.toLowerCase().includes(query.toLowerCase()) && (
                 <CSSTransition classNames="dialog" timeout={300}>
@@ -80,37 +80,37 @@ function Home({ query }) {
                 </CSSTransition>
               )}
             </TransitionGroup>
+          </Link>
 
-            <TransitionGroup component={null}>
-              {title1.toLowerCase().includes(query.toLowerCase()) && (
-                <CSSTransition classNames="dialog" timeout={300}>
-                  <img src={pic2} className="amazon-pics" />
-                </CSSTransition>
-              )}
-            </TransitionGroup>
+          <TransitionGroup component={null}>
+            {title1.toLowerCase().includes(query.toLowerCase()) && (
+              <CSSTransition classNames="dialog" timeout={300}>
+                <img src={pic2} className="amazon-pics" />
+              </CSSTransition>
+            )}
+          </TransitionGroup>
 
-            <TransitionGroup component={null}>
-              {title2.toLowerCase().includes(query.toLowerCase()) && (
-                <CSSTransition classNames="dialog" timeout={300}>
-                  <img className="amazon-pics" src={pic3} />
-                </CSSTransition>
-              )}
-            </TransitionGroup>
-            <div style={{ justifyContent: "center" }}>
-              <div className="signin-container">
-                <h3 className="sign-in">Sign in for the best experience</h3>
-                <Link to="/login">
-                  <button className="sign-in-btn">Sign in securely</button>
-                </Link>
-              </div>
-              <img
-                src={pic4}
-                className="amazon-pics"
-                style={{ width: "305px", marginLeft: "30px" }}
-              />
+          <TransitionGroup component={null}>
+            {title2.toLowerCase().includes(query.toLowerCase()) && (
+              <CSSTransition classNames="dialog" timeout={300}>
+                <img className="amazon-pics" src={pic3} />
+              </CSSTransition>
+            )}
+          </TransitionGroup>
+          <div style={{ justifyContent: "center" }}>
+            <div className="signin-container">
+              <h3 className="sign-in">Sign in for the best experience</h3>
+              <Link to="/login">
+                <button className="sign-in-btn">Sign in securely</button>
+              </Link>
             </div>
+            <img
+              src={pic4}
+              className="amazon-pics"
+              style={{ width: "285px", marginLeft: "30px" }}
+            />
           </div>
-        </Link>
+        </div>
 
         <div className="home-row" style={{ marginLeft: "0px" }}>
           <Link to="/shop">
@@ -138,13 +138,8 @@ function Home({ query }) {
                   </CSSTransition>
                 )}
               </TransitionGroup>
-              <div>
-                <img
-                  src={pic2}
-                  className="amazon-pics"
-                  style={{ width: "280px" }}
-                />
-              </div>
+
+              <img src={pic2} className="amazon-pics" />
             </div>
           </Link>
         </div>

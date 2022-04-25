@@ -13,7 +13,7 @@
 }
 
 .home-image {
-  width: 110%;
+  width: 101%;
   object-fit: contain;
   z-index: -1;
   /* margin-bottom: -350px; */
@@ -27,14 +27,15 @@
 .home-row {
   display: flex;
   z-index: 1;
-  margin-left: 5px;
+  margin-left: -40px;
   margin-right: 5px;
   max-width: 100%;
 }
 
 .rec.rec-carousel {
+  /* margin-top: 20px; */
   width: 110%;
-  margin-bottom: -380px;
+  margin-bottom: -360px;
 }
 
 @media (max-width: 1367px) {
@@ -142,9 +143,10 @@ height:"100%"
 }
 
 .amazon-pics {
-  width: 340px;
+  width: 358px;
   block-size: fit-content;
   margin-right: 20px;
+  margin-left: 0px;
   margin-bottom: 20px;
 }
 .amazon-pics:hover {

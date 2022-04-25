@@ -93,8 +93,8 @@ function Header({ setQuery }) {
                     }`}
               </span>
               <span className="header-optionLineTwo">
-                {/* Account & Lists */}
-                {user ? "Sign Out" : "Sign In"}
+                Account & Lists
+                {/* {user ? "Sign Out" : "Sign In"} */}
               </span>
             </div>
           </Link>

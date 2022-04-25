@@ -29,16 +29,17 @@
 }
 
 .header-searchInput {
-  height: 14px;
-  padding: 10px;
+  height: 30px;
+  padding: 5px;
   border: none;
   width: 100%;
 }
 
 .header-searchIcon {
-  padding: 5px;
+  padding: 5px 10px;
   margin-left: -5px;
-  height: 24px !important;
+  height: 30px !important;
+  /* width: 80px; */
   background-color: #ffb555;
 }
 

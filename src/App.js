@@ -73,14 +73,17 @@ function App() {
           </Route>
           <Route path="/checkout">
             <Header />
+            <Navbar />
             <Checkout />
           </Route>
           <Route path="/shop">
             <Header setQuery={setQuery} />
+            <Navbar />
             <Home query={query} />
           </Route>
           <Route path="/payment">
             <Header />
+            <Navbar />
             <Elements stripe={promise}>
               <Payment />
             </Elements>
